@@ -1,0 +1,5 @@
+## Append samples of your project ##
+resources:
+- infrastructure_v1alpha1_xcpngmachine.yaml
+- infrastructure_v1alpha1_xcpngcluster.yaml
+#+kubebuilder:scaffold:manifestskustomizesamples

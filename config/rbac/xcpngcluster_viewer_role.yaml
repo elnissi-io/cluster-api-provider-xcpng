@@ -1,0 +1,23 @@
+# permissions for end users to view xcpngclusters.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  labels:
+    app.kubernetes.io/name: cluster-api-provider-xcpng
+    app.kubernetes.io/managed-by: kustomize
+  name: xcpngcluster-viewer-role
+rules:
+- apiGroups:
+  - infrastructure.xcpng.k8s.io
+  resources:
+  - xcpngclusters
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - infrastructure.xcpng.k8s.io
+  resources:
+  - xcpngclusters/status
+  verbs:
+  - get
