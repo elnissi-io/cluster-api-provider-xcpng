@@ -28,14 +28,13 @@ type XCPngClusterSpec struct {
 	// INSERT ADDITIONAL SPEC FIELDS - desired state of cluster
 	// Important: Run "make" to regenerate code after modifying this file
 
-	// Foo is an example field of XCPngCluster. Edit xcpngcluster_types.go to remove/update
-	Foo string `json:"foo,omitempty"`
+	NetworkSettings string `json:"networkSettings,omitempty"`
 }
 
 // XCPngClusterStatus defines the observed state of XCPngCluster
 type XCPngClusterStatus struct {
-	// INSERT ADDITIONAL STATUS FIELD - define observed state of cluster
-	// Important: Run "make" to regenerate code after modifying this file
+	// INSERT ADDITIONAL STATUS FIELD - observed state of cluster
+	Ready bool `json:"ready"`
 }
 
 //+kubebuilder:object:root=true
